@@ -1,0 +1,5 @@
+Design Pattern Homework (slides 38-39)
+1.Strategy Design Pattern
+2.Adapter Design Pattern
+3.Builder Design Pattern
+4.Lazy loading Design Pattern

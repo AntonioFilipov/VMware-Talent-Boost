@@ -1,0 +1,12 @@
+create-vm vmid2 "My UbutnuVm" 536870912 3
+create-vm vmid3 "My UbutnuVm" 536870912 3
+create-vm vmid4 "My UbutnuVm" 536870912 3
+create-vm vmid5 "My UbutnuVm" 536870912 3
+create-vm vmid1 "My Windows" 512 1
+add-dev vmid2 NETWORK_CARD nc1 12-12-12-12-12-12
+add-dev vmid2 HARDDISK_CONTROLLER hdc2 SCSI
+add-dev vmid2 HARDDISK_CONTROLLER hdc1 IDE
+add-dev vmid2 HARDDISK hd1 100 hdc1
+print-vms
+help
+stop

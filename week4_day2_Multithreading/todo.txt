@@ -1,0 +1,7 @@
+Garbage collector
+DONE:1.Install apache maven - https://maven.apache.org/install.html
+DONE:2.Run server - mvn clean install | java - jar /target/Javatopia3-0.1.1-SNAPSHOT.jar | localhost:8080 | https://spring.io/blog/2014/03/07/deploying-spring-boot-applications
+DONE:3.Convert project to maven project
+DONE:4.Add jgrapht
+DONE:5.Class Vertex, create graph
+DONE:6.Set true/false to isSystemRoot field of Vertex class

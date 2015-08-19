@@ -1,0 +1,12 @@
+ID         Name                 Memmory              CPU                 
+
+vmid3      My UbutnuVm          536870912            3                   
+
+vmid2      My UbutnuVm          536870912            3                   
+
+vmid5      My UbutnuVm          536870912            3                   
+
+vmid4      My UbutnuVm          536870912            3                   
+
+vmid1      My Windows           512                  1                   
+

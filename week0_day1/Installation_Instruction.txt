@@ -1,0 +1,69 @@
+Installation instructions
+
+1. Create C:\Projects and C:\Toolchain
+2. Install Perforce http://www.perforce.com/downloads/perforce/r14.1/bin.ntx64/p4vinst64.exe
+Perforce Server: perforce.talentboost.org:1666
+
+Perforce Workspace for Projects
+Workspace name: <username>-projects
+Workspace root folder: C:\Projects
+Workspace Mapping:
+//depot/<username>/...    //<workspace name>/...
+
+3. Install JDK 1.8.0_45 (available on your desktop)
+
+4. Install Eclipse (available on your desktop)
+
+5. Create Eclipse Project
+
+Start Eclipse and create a Java Project in C:\Projects\HelloWorld.
+Create class: AppHelloWorld
+Add main method:
+    public static void main(String args[]){
+    System.out.println(“HelloWorld”);
+}
+
+Use p4v to submit your HellowWorld project in perforce
+
+ 
+
+Intallation of ReviewBoardTools - (optional)
+--------------------------------------------------------------------------------------------------------------------
+
+https://www.python.org/download/releases/2.7.7/
+Once Python and setuptools are installed, you may need to add a couple directories to your system path.
+1.    Open Start ? Control Panel and navigate to the System icon.
+2.    Click on the Advanced tab.
+3.    Click Environment Variables.
+4.    Find PATH in System variables and click Edit.
+5.    Add ;C:\Python27;C:\Python27\Scripts (substitute your Python directory if it’s not C:\Python27) to the end of the list.
+6.    Downolad and then run ez_setup.py
+7.    Run in command prompt: easy_install -U RBTools
+8.    Create C:\diff folder and add it to the Path variable.
+9.    Unzip diffutils-bin in a folder of your choice (for example: c:\uziped-diff-bin)
+10.   Copy all files from c:\uziped-diff-bin\bin to C:\diff
+11.   Delete the uziped-diff-bin
+12.   Unzip diffutills-dep in a folder of your choice (for example: c:\uziped-diff-dep)
+13.   Copy all files from c:\uziped-diff-dep\bin to C:\diff
+14.   Open P4V and Select Tools->Manage Custom Tools. In the opened “Manage Custom Tools” window select New->Tool…
+15.   In the opened “Add Custom Tool” dialog enter the following data:
+       Name: PostReview
+       Select “Add to applicable context menu” checkbox.
+       Application: rbt
+       Arguments: post --debug --server=https://rb.talentboost.org/ --username=$u --password=****** --repository=perforce-2014 %P
+  (Note: Replace asterisk with your password)
+       Select “Run Tool in terminal window” checkbox
+16. Click OK button to close the dialog. Click OK to close “Manage Custom Tools” dialog.
+
+If everything is setup correctly you can right click on a change list (doesn’t work on default change list),
+the last option in the context menu should be “PostReview”
+
+Post review tool will upload your changes in review board -> https://rb.talentboost.org
+
+Example output from PosrReview tool:
+-------------------------------------
+Review request #61 posted.
+
+https://rb.talentboost.org/r/61/
+https://rb.talentboost.org/r/61/diff/
+--------------------------------------

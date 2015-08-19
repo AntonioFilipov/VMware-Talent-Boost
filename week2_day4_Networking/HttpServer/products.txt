@@ -1,0 +1,3 @@
+apple 3 1
+water 2 2
+milk 10 3
